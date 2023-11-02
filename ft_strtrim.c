@@ -61,5 +61,5 @@ char *ft_strtrim(char const *s1, char const *set)
 
 int main()
 {
-    printf("%s \n", ft_strtrim("###khalil # sohail#", "khl#"));
+    printf("%s \n", ft_strtrim("#khalil # sohail#", "#"));
 }
