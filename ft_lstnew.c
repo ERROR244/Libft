@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 19:10:50 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/01 19:11:13 by ksohail-         ###   ########.fr       */
+/*   Created: 2023/11/04 14:17:22 by ksohail-          #+#    #+#             */
+/*   Updated: 2023/11/04 14:17:27 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+t_list *ft_lstnew(void *content)
 {
-    if (c >= 97 && c<= 122)
-        c -= 32;
-    return (c);
+    t_list *n_node;
+
+    n_node = (t_list *)malloc(sizeof(struct s_list));
+    if (n_node == NULL)
+        return (NULL);
+    n_node->content = content;
+    n_node->next = NULL;
+    return (n_node);
 }/*
 
-int main() {
-    char lowercase = 'Z';
-    char uppercase = ft_toupper(lowercase);
+int main()
+{
+	t_list *new_node = ft_lstnew("Hello, World!");
+	
+    printf("Content: %s\n", (char *)new_node->content);
 
-    printf("Lowercase character: %c\n", lowercase);
-    printf("Uppercase character: %c\n", uppercase);
-
-    return 0;
+	free(new_node);
+	return 0;
 }
-
 */

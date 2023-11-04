@@ -34,7 +34,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
         ptr[i++] = s2[j++];
     ptr[i] = '\0';
     return (ptr);
-}
+}/*
 
 int main()
 {
@@ -45,3 +45,5 @@ int main()
 
 
 }
+
+*/

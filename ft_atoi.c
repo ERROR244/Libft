@@ -36,10 +36,7 @@ int ft_atoi(const char *nptr)
         i++;
     }
     return (sign * res);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
+}/*
 
 int main() {
     // Test cases for atoi function
@@ -68,4 +65,4 @@ int main() {
 
     return 0;
 }
-
+*/

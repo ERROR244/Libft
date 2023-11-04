@@ -11,19 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*ptr;
-
-	ptr = ft_itoa(n);
-	ft_putstr_fd(ptr, fd);
-}
+	ft_putstr_fd(ft_itoa(n), fd);
+}/*
 
 int main()
 {
-    int i;
-
-    scanf("%d", &i);
-    ft_putnbr_fd(i, open("text.txt", O_WRONLY | O_CREAT, 0644));
+    ft_putnbr_fd(INT_MIN, 1);
 }
+
+*/

@@ -26,7 +26,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
     if (size == 1)
         dst[i] = '\0';
     return (ft_strlen(src));
-}
+}/*
 
 int main() {
     int k = 30;
@@ -53,3 +53,5 @@ int main() {
 
     return 0;
 }
+
+*/

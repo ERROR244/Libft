@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 	nos = num_of_strings(s, c);
 	ptr = (char **)malloc((nos + 1) * sizeof(char *));
 	return (allocate_and_fill(s, nos, ptr, c));
-}
+}/*
 
 int main()
 {
@@ -114,3 +114,5 @@ int main()
 		printf("%s\n", ptr[i]);
 	}
 }
+
+*/

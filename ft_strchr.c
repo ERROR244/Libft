@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	return (NULL);
-}
+}/*
 
 int main() {
     const char str[] = "This is a test string";
@@ -46,3 +46,5 @@ int main() {
 
     return 0;
 }
+
+*/

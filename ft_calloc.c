@@ -31,7 +31,7 @@ void *ft_calloc(size_t nmemb, size_t size)
         //ft_bzero(ptr, size * nmemb);
     }
 	return (ptr);
-}
+}/*
 
 int main() {
     // Test various cases of calloc
@@ -136,3 +136,5 @@ int main() {
     return 0;
 }
 
+
+*/

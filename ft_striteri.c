@@ -33,7 +33,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
         f(i, &s[i]);
         i++;
     }
-}
+}/*
 
 int main() {
     char inputString[] = "ExAmPl#EsTrInG";
@@ -46,3 +46,4 @@ int main() {
     printf("Modified String: %s\n", inputString);
     return 0;
 }
+*/

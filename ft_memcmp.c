@@ -29,7 +29,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
         n--;
     }
     return (ptr1[i] - ptr2[i]);
-}
+}/*
 
 int main() {
     const char* test_cases[][2] = {
@@ -63,4 +63,6 @@ String 1: grape      String 2: grapefruit      Result: 0  // Identical first 4 c
 String 1:            String 2: test            Result: -116  // '\0' - 't' (in "test") = -116
 String 1: test       String 2:                 Result: 116  // 't' (in "test") - '\0' = 116
 String 1: same       String 2: same            Result: 0  // Identical strings
+*/
+
 */

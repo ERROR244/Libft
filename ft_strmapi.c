@@ -38,7 +38,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         len--;
     }
     return (ptr);
-}
+}/*
 
 int main() {
     const char *inputString = "examplestring"; // Your test string
@@ -58,3 +58,5 @@ int main() {
     free(resultString); // Free the allocated memory for the result string
     return 0;
 }
+
+*/

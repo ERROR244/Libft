@@ -36,7 +36,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
         big++; 
     }
     return (NULL);
-}
+}/*
 
 int main() {
     const char* test_haystacks[] = {
@@ -83,3 +83,5 @@ int main() {
 
     return 0;
 }
+
+*/

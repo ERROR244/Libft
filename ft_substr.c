@@ -28,7 +28,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
         start++;
     }
     return (ptr);
-}
+}/*
 
 int main()
 {
@@ -36,3 +36,4 @@ int main()
 
     printf("%s \n", ft_substr(ptr, 7, 7));
 }
+*/

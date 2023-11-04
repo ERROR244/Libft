@@ -43,7 +43,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
         }
     }
     return (dest);
-}
+}/*
 
 int main() {
     char str[] = "Hello, this is a test string.";
@@ -64,3 +64,5 @@ int main() {
 
     return 0;
 }
+
+*/

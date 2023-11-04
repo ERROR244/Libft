@@ -25,7 +25,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
         n--;
     }
     return (s1[i] - s2[i]);
-}
+}/*
 int main() {
     const char* test_cases[][2] = {
         {"apple", "apples"},    // Same prefix, different lengths
@@ -49,3 +49,5 @@ int main() {
 
     return 0;
 }
+
+*/

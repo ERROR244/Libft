@@ -27,7 +27,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
         i++;
     }
     return (dest);
-}
+}/*
 
 int main() {
     const char src[] = "This is the source string.";
@@ -42,3 +42,5 @@ int main() {
 
     return 0;
 }
+
+*/

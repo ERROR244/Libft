@@ -26,7 +26,7 @@ void *ft_memchr(const void *s, int c, size_t n)
         i++;
     }
     return (NULL);
-}
+}/*
 
 int main() {
     const char* test_strings[] = {
