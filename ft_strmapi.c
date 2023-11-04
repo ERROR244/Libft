@@ -29,10 +29,10 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
     if (*s == '\0')
         return (ft_strdup(""));
-    ptr = (char *)malloc(len * sizeof(char));
+    ptr = (char *)malloc((len + 1) * sizeof(char));
     ptr[len] = '\0';
     len--;
-    while (len > 0)
+    while (len >= 0)
     {
         ptr[len] = f(len, s[len]);
         len--;

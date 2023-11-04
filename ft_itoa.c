@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:40:31 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/03 09:41:04 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/04 11:16:45 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,13 @@ char *ft_itoa(int n)
     ptr[x] = '\0';
     if (i == -2147483648)
     {
-        ptr[-x] = '8';
+        ptr[--x] = '8';
         i = -214748364;
     }
     x--;
     return (fill(ptr, i, x));
 }
-
+/*
 int main()
 {
     int i = 2147483647;
@@ -71,4 +71,4 @@ int main()
     printf("%s\n", ft_itoa(k));
     printf("%s\n", ft_itoa(l));
     printf("%s\n", ft_itoa(m));
-}
+}*/

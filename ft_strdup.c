@@ -18,7 +18,7 @@ char *ft_strdup(const char *s)
     int len;
     char *ptr;
 
-    len = strlen(s);
+    len = ft_strlen(s);
     i = 0;
     ptr = (char *)malloc((len + 1) * sizeof(char));
     if (ptr == NULL)
@@ -29,9 +29,9 @@ char *ft_strdup(const char *s)
         i++;
     }
     return (ptr);
+
 }
-
-
+/*
 int main() {
     const char original[] = "Hello, this is a string.";
 
@@ -50,3 +50,4 @@ int main() {
 
     return 0;
 }
+*/
