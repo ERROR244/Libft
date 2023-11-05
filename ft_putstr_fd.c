@@ -20,9 +20,3 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
-/*
-int	main()
-{
-	ft_putstr_fd("khalil sohail!", open("text.txt", O_WRONLY | O_CREAT, 0644));
-}
-*/

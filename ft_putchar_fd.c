@@ -6,18 +6,13 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:27:19 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/04 10:50:12 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/05 16:47:18 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-/*
-int main()
-{
-	ft_putchar_fd('c', open("text.txt", O_WRONLY | O_CREAT, 0644));
-}*/

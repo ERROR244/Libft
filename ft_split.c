@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 20:57:54 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/02 21:13:36 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:07:35 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,33 +86,4 @@ char	**ft_split(char const *s, char c)
 	nos = num_of_strings(s, c);
 	ptr = (char **)malloc((nos + 1) * sizeof(char *));
 	return (allocate_and_fill(s, nos, ptr, c));
-}/*
-
-int main()
-{
-	int	nos;
-	int	len;
-	char	**ptr;
-	char	*s;
-	char	c;
-
-	s = "-khalil-sohail-is-sohail-khalil-";
-	c = '-';
-	//num_of_strings test
-
-	nos = num_of_strings(s, c);
-	printf("%d \n", nos);
-	//string_str_len test
-
-	len = string_str_len(s, c);
-	printf("%d \n", len);
-
-	//ft_splti test
-	char **ptr = ft_split(s, c);
-	for (int i = 0; i < nos; i++)
-	{
-		printf("%s\n", ptr[i]);
-	}
 }
-
-*/
