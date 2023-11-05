@@ -36,8 +36,8 @@ int ft_atoi(const char *nptr)
         i++;
     }
     return (sign * res);
-}/*
-
+}
+	
 int main() {
     // Test cases for atoi function
     const char* test_cases[] = {
@@ -65,4 +65,3 @@ int main() {
 
     return 0;
 }
-*/
