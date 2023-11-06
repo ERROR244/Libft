@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:58:10 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 16:00:13 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:20:13 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t			i;
 	unsigned char		*ptr1;
 	const unsigned char	*ptr2;
+	size_t				i;
 
 	i = 0;
 	ptr1 = (unsigned char *)dest;

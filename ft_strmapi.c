@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:49:51 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 17:41:17 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:15:30 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	len;
 	char	*ptr;
+	int		len;
 
 	len = ft_strlen(s);
 	if (*s == '\0')

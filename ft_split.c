@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 20:57:54 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 17:07:35 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:14:58 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	nos;
 	char	**ptr;
+	int		nos;
 
 	nos = num_of_strings(s, c);
 	ptr = (char **)malloc((nos + 1) * sizeof(char *));

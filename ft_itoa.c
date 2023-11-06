@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:40:31 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 17:00:19 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:21:20 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ void	nor_line(int *n, int *x)
 
 char	*ft_itoa(int n)
 {
-	int	i;
-	int	x;
 	char	*ptr;
+	int		i;
+	int		x;
 
 	x = 0;
 	i = n;

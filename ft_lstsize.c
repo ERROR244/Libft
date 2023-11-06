@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:29:17 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 15:44:46 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:18:35 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_lstsize(t_list *lst)
 {
+	t_list	*curr;
 	int		i;
-	t_list		*curr;
 
 	i = 0;
 	curr = lst;

@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:47:38 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 17:12:01 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:56:23 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	int	i;
-	int	len;
 	char	*ptr;
+	int		i;
+	int		len;
 
 	len = ft_strlen(s);
 	i = 0;

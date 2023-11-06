@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:34:58 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 14:31:55 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:21:29 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	ptr = (unsigned char *)s;

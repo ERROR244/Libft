@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:29:10 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 18:42:09 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:19:48 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ int	f2(int k, char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	a;
-	int	k;
-	int	l;
 	char	*ptr;
+	int		a;
+	int		k;
+	int		l;
 
 	k = f2(0, s1, set);
 	l = f1(0, s1, set);
