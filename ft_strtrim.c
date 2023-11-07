@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:29:10 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 11:19:48 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/06 18:59:47 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ptr[l++] = s1[k++];
 	ptr[l] = '\0';
 	return (ptr);
-}
-
-int	main(void)
-{
-	printf("%s \n", ft_strtrim("#khalil # sohail#", "lks#"));
 }
