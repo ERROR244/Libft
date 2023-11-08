@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 20:57:54 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 11:14:58 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:56:08 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
 			ptr[i][l++] = (char)*s++;
 		ptr[i++][l] = '\0';
 	}
-  // i++;
+  	i++;
 	ptr[i] = "\0";
 	return (ptr);
 }
