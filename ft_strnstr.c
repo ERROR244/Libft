@@ -15,8 +15,10 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t		needle_len;
-	const char	*end;
-
+	// const char	*end;
+  size_t i = 0;
+  // if ()
+    // len = ft_strlen(big);
 	needle_len = ft_strlen(little);
 	if (needle_len == 0)
 	{
@@ -24,14 +26,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	if (len < needle_len)
 		return (NULL);
-	end = big + len - needle_len + 1;
-	while (big < end)
+	// end = big + len - needle_len + 1;
+	while (i < len)
 	{
 		if (*big == *little && ft_strncmp(big, little, needle_len - 1) == 0)
 		{
 			return ((char *)big);
 		}
 		big++;
+    i = 0;
 	}
 	return (NULL);
 }

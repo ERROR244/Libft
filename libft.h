@@ -11,19 +11,15 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
 
-#define SIZE_MAX ((size_t)-1)
+# define SIZE_MAX ((size_t)-1)
 
-typedef unsigned long size_t;
-
-typedef struct  s_list
-{
+typedef struct  s_list {
     void    *content;
     struct  s_list *next;
 }   t_list;

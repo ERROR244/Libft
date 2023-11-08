@@ -21,7 +21,7 @@ int	num_of_strings(const char *s, char c)
 	nos = 0;
 	if (s[0] == c)
 		i++;
-	nos++;
+	// nos++;
 	while (s[i])
 	{
 		if (s[i - 1] != c && s[i] == c)
@@ -74,7 +74,8 @@ char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
 			ptr[i][l++] = (char)*s++;
 		ptr[i++][l] = '\0';
 	}
-	ptr[i] = '\0';
+  // i++;
+	ptr[i] = "\0";
 	return (ptr);
 }
 
