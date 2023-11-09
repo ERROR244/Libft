@@ -6,7 +6,7 @@
 #    By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:29:42 by ksohail-          #+#    #+#              #
-#    Updated: 2023/11/08 19:58:36 by ksohail-         ###   ########.fr        #
+#    Updated: 2023/11/09 12:42:24 by ksohail-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,10 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 bonus: $(BONUS_OBJS)
-	ar rc $(NAME) $(BONUS_OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(BONUS_OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
