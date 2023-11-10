@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:01:41 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 18:58:22 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:26:42 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned char	k;
 	int				i;
 
+	if (s == NULL)
+		return (NULL);
 	k = (unsigned char)c;
 	i = ft_strlen(s);
 	while (i >= 0)

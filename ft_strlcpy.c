@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:03:59 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 19:31:35 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:29:29 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	int	i;
 
 	i = 0;
+	if (src == NULL)
+		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
 	while (src[i] && size - 1 > 0)

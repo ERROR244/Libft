@@ -6,11 +6,13 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:45:57 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 14:41:44 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:31:47 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -21,7 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (ft_strdup(""));
 	if (nmemb > SIZE_MAX / size)
 	{
-		return (0);
+		return (NULL);
 	}
 	ptr = (void *)malloc(nmemb * size);
 	if (ptr != NULL)

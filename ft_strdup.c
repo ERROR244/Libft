@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:47:38 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 10:56:23 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:10:21 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s)
 	int		i;
 	int		len;
 
+	if (s == NULL)
+		return (NULL);
 	len = ft_strlen(s);
 	i = 0;
 	ptr = (char *)malloc((len + 1) * sizeof(char));

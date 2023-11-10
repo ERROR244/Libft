@@ -6,11 +6,12 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 20:57:54 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/08 13:56:08 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:49:39 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
+#include <stdio.h>
 
 static int	num_of_strings(const char *s, char c)
 {
@@ -19,9 +20,10 @@ static int	num_of_strings(const char *s, char c)
 
 	i = 0;
 	nos = 0;
-	if (s[0] == c)
+	while (s[i] == c)
 		i++;
-	// nos++;
+	if (s[i] == '\0')
+		return (nos);
 	while (s[i])
 	{
 		if (s[i - 1] != c && s[i] == c)
@@ -32,6 +34,8 @@ static int	num_of_strings(const char *s, char c)
 		}
 		i++;
 	}
+	if (nos == 0)
+		nos++;
 	return (nos);
 }
 
@@ -71,20 +75,52 @@ static char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
 		while (*s == c)
 			s++;
 		while (k < j && *s != c && *s != '\0')
+		{
 			ptr[i][l++] = (char)*s++;
+		}
 		ptr[i++][l] = '\0';
 	}
-  	i++;
-	ptr[i] = "\0";
+	ptr[i] = NULL;
 	return (ptr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
+	char	**ptr1;
+	char	*ptr2;
 	int		nos;
+	int		i;
 
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	if (c == 0)
+	{
+		ptr1 = (char **)malloc((2) * sizeof(char *));
+		ptr2 = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+		while (s[i])
+		{
+			ptr2[i] = s[i];
+			i++;
+		}
+		ptr2[i] = '\0';
+		ptr1[0] = ptr2;
+		ptr1[1] = '\0';
+		return (ptr1);
+	}
 	nos = num_of_strings(s, c);
-	ptr = (char **)malloc((nos + 1) * sizeof(char *));
-	return (allocate_and_fill(s, nos, ptr, c));
+	ptr1 = (char **)malloc((nos + 1) * sizeof(char *));
+	if (ptr1 == NULL)
+		return (NULL);
+	return (allocate_and_fill(s, nos, ptr1, c));
+}
+
+int main() {
+    char test_string[] = "";
+    char delimiter = ' ';
+
+    char **result = ft_split(test_string, ' ');
+    printf("%s\n", result[0]);
+
+    return 0;
 }

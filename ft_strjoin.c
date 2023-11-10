@@ -6,31 +6,25 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:54:54 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 11:20:52 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:27:59 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	strlens(const char *s)
-{
-	int	i;
-
-	i = 0;
-	if (s == NULL)
-		return (0);
-	while (s[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
 	int		i;
 	int		j;
-	
-  ptr = (char *)malloc((strlens(s1) + strlens(s2) + 1) * sizeof(char));
+
+	if (s1 == NULL && s2 != NULL)
+		return ((char *)s2);
+	if (s2 == NULL && s1 != NULL)
+		return ((char *)s1);
+	if (s1 == NULL && s2 != NULL)
+		return (NULL);
+  	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	i = 0;
 	j = 0;
 	if (ptr == 0)
