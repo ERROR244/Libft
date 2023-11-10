@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ben10(size_t n, unsigned char *ptr1, const unsigned char *ptr2)
+static void	ben10(size_t n, unsigned char *ptr1, const unsigned char *ptr2)
 {
 	while (n > 0)
 	{

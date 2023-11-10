@@ -12,13 +12,25 @@
 
 #include "libft.h"
 
+static size_t	strlens(const char *s)
+{
+	int	i;
+
+	i = 0;
+	if (s == NULL)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
 	int		i;
 	int		j;
-
-	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	
+  ptr = (char *)malloc((strlens(s1) + strlens(s2) + 1) * sizeof(char));
 	i = 0;
 	j = 0;
 	if (ptr == 0)
@@ -29,7 +41,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	while (s2[j])
-	ptr[i++] = s2[j++];
+  		ptr[i++] = s2[j++];
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+

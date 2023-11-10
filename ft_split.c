@@ -12,7 +12,7 @@
 
 #include	"libft.h"
 
-int	num_of_strings(const char *s, char c)
+static int	num_of_strings(const char *s, char c)
 {
 	int	i;
 	int	nos;
@@ -35,7 +35,7 @@ int	num_of_strings(const char *s, char c)
 	return (nos);
 }
 
-int	string_str_len(const char *s, char c)
+static int	string_str_len(const char *s, char c)
 {
 	int	i;
 	int	len;
@@ -53,7 +53,7 @@ int	string_str_len(const char *s, char c)
 	return (len);
 }
 
-char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
+static char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
 {
 	int	j;
 	int	i;

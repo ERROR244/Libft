@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*fill(char *ptr, int n, int x)
+static char	*fill(char *ptr, int n, int x)
 {
 	int	i;
 
@@ -30,7 +30,7 @@ char	*fill(char *ptr, int n, int x)
 	return (ptr);
 }
 
-void	nor_line(int *n, int *x)
+static void	nor_line(int *n, int *x)
 {
 	if (*n < 0)
 	{
