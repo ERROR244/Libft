@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (little == NULL)
+	if (little == NULL || big == NULL)
 		return (NULL);
 	needle_len = ft_strlen(little);
 	if (needle_len == 0)

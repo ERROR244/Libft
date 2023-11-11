@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <string.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -22,9 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb == 0 || size == 0)
 		return (ft_strdup(""));
 	if (nmemb > SIZE_MAX / size)
-	{
 		return (NULL);
-	}
 	ptr = (void *)malloc(nmemb * size);
 	if (ptr != NULL)
 	{

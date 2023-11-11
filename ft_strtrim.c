@@ -13,7 +13,9 @@
 #include "libft.h"
 
 static int f1(int l, char const *s1, char const *set) {
-    int i = ft_strlen(s1) - 1;
+    int i;
+
+    i = ft_strlen(s1) - 1;
     while (i >= 0) {
         int j = 0;
         while (set[j]) {
@@ -30,7 +32,9 @@ static int f1(int l, char const *s1, char const *set) {
 }
 
 static int f2(int k, char const *s1, char const *set) {
-    int i = 0;
+    int i;
+
+    i = 0;
     while (s1[i]) {
         int j = 0;
         while (set[j]) {
@@ -47,11 +51,13 @@ static int f2(int k, char const *s1, char const *set) {
 }
 
 char *ft_strtrim(char const *s1, char const *set) {
+    char    *ptr;
+    int     a;
+    int     k;
+    int     l;
+
     if (s1 == NULL || set == NULL)
         return NULL;
-
-    char *ptr;
-    int a, k, l;
     k = f2(0, s1, set);
     l = f1(0, s1, set);
     a = ft_strlen(s1) - (k + l);

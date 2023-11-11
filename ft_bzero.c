@@ -17,6 +17,8 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*ptr;
 	size_t			i;
 
+  if (s == NULL)
+    return;
 	i = 0;
 	ptr = (unsigned char *)s;
 	while (i < n)

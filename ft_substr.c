@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		ptr = (char *)malloc(1 * sizeof(char));
 		if (ptr == NULL)
-			return (0);
+			return (NULL);
 		*ptr = '\0';
 		return (ptr);
 	}

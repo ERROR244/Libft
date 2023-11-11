@@ -11,116 +11,89 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int	num_of_strings(const char *s, char c)
+static int count_words(char const *s, char c)
 {
-	int	i;
-	int	nos;
+    int count;
+    int in_word;
 
-	i = 0;
-	nos = 0;
-	while (s[i] == c)
-		i++;
-	if (s[i] == '\0')
-		return (nos);
-	while (s[i])
-	{
-		if (s[i - 1] != c && s[i] == c)
-		{
-			if (s[i + 1] == '\0')
-				break ;
-			nos++;
-		}
-		i++;
-	}
-	if (nos == 0)
-		nos++;
-	return (nos);
+    count = 0;
+    in_word = 0;
+    while (s && *s)
+    {
+        if (*s == c) 
+            in_word = 0;
+        else
+        {
+            if (in_word == 0 && *s != c)
+            {
+                count++;
+                in_word = 1;
+            }
+        }
+        s++;
+    }
+    return (count);
 }
 
-static int	string_str_len(const char *s, char c)
+static char *ft_strndup(const char *s, size_t n)
 {
-	int	i;
-	int	len;
+    char    *dup;
+    size_t  i;
+    if (!s)
+        return (NULL);
 
-	i = 0;
-	len = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i] && s[i] != c)
-	{
-		i++;
-		len++;
-	}
-	len++;
-	return (len);
+    dup = (char *)malloc((n + 1) * sizeof(char));
+    if (dup != NULL)
+    {
+         i = 0;
+        while (i < n)
+        {
+            dup[i] = s[i];
+            i++;
+        }
+        dup[n] = '\0';
+    }
+    return (dup);
 }
 
-static char	**allocate_and_fill(const char *s, int nos, char **ptr, char c)
+char **ft_split(char const *s, char c)
 {
-	int	j;
-	int	i;
-	int	k;
-	int	l;
+    int word_count;
+    char **ptr;
+    const char *start;
+    int i;
+    int j;
+    if (s == NULL)
+        return NULL;
 
-	j = 0;
-	i = 0;
-	k = 0;
-	while (i < nos)
-	{
-		j = string_str_len(s, c);
-		ptr[i] = (char *)malloc(j * sizeof(char));
-		l = 0;
-		while (*s == c)
-			s++;
-		while (k < j && *s != c && *s != '\0')
-		{
-			ptr[i][l++] = (char)*s++;
-		}
-		ptr[i++][l] = '\0';
-	}
-	ptr[i] = NULL;
-	return (ptr);
-}
+    word_count = count_words(s, c);
+    ptr = malloc((word_count + 1) * sizeof(char *));
+    if (ptr == NULL)
+        return NULL;
 
-char	**ft_split(char const *s, char c)
-{
-	char	**ptr1;
-	char	*ptr2;
-	int		nos;
-	int		i;
-
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	if (c == 0)
-	{
-		ptr1 = (char **)malloc((2) * sizeof(char *));
-		ptr2 = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
-		while (s[i])
-		{
-			ptr2[i] = s[i];
-			i++;
-		}
-		ptr2[i] = '\0';
-		ptr1[0] = ptr2;
-		ptr1[1] = '\0';
-		return (ptr1);
-	}
-	nos = num_of_strings(s, c);
-	ptr1 = (char **)malloc((nos + 1) * sizeof(char *));
-	if (ptr1 == NULL)
-		return (NULL);
-	return (allocate_and_fill(s, nos, ptr1, c));
-}
-
-int main() {
-    char test_string[] = "";
-    char delimiter = ' ';
-
-    char **result = ft_split(test_string, ' ');
-    printf("%s\n", result[0]);
-
-    return 0;
+     i = 0;
+    while (*s)
+    {
+        if (*s != c)
+        {
+            start = s;
+            while (*s && *s != c)
+                s++;
+            ptr[i] = ft_strndup(start, s - start);
+            if (ptr[i] == NULL)
+            {
+                j = 0;
+                while (j < i)
+                    free(ptr[j++]);
+                free(ptr);
+                return NULL;
+            }
+            i++;
+        } 
+        else
+            s++;
+    }
+    ptr[i] = NULL;
+    return (ptr);
 }

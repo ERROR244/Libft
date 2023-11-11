@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char	*fill(char *ptr, int n, int x)
+static char	*fill(char *ptr, long n, int x)
 {
 	int	i;
 
@@ -42,7 +42,7 @@ static void	nor_line(int *n, int *x)
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		i;
+	long		i;
 	int		x;
 
 	x = 0;
@@ -56,12 +56,9 @@ char	*ft_itoa(int n)
 		x++;
 	}
 	ptr = (char *)malloc((x + 1) * sizeof(char));
-	ptr[x] = '\0';
-	if (i == -2147483648)
-	{
-		ptr[--x] = '8';
-		i = -214748364;
-	}
-	x--;
+	if (ptr == NULL)
+    return (NULL);
+  ptr[x] = '\0';
+  x--;
 	return (fill(ptr, i, x));
 }
