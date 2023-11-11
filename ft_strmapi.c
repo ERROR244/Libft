@@ -23,6 +23,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (*s == '\0')
 		return (ft_strdup(""));
 	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
 	ptr[len] = '\0';
 	len--;
 	while (len >= 0)
