@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:45:57 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/10 18:31:47 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:18:18 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
-		return (ft_strdup(""));
+	{
+		ptr = (char *)malloc(1 * sizeof(char));
+		*((char *)ptr) = 0;
+		return (ptr);
+	}
 	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	ptr = (void *)malloc(nmemb * size);

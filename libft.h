@@ -6,7 +6,7 @@
 /*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:39:24 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/06 13:00:25 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:56:39 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
-
 # define SIZE_MAX ((size_t)-1)
 
 typedef struct  s_list {
