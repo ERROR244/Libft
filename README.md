@@ -1,6 +1,10 @@
 # Libft
-Usage
-make without bonus functions.
 
-make bonus to compile with bonuses.
+# Usage
+
+make
+    without bonus functions.
+
+make
+    bonus to compile with bonuses.
 
