@@ -29,8 +29,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	len--;
 	while (len >= 0)
 	{
-	ptr[len] = f(len, s[len]);
-	len--;
+		ptr[len] = f(len, s[len]);
+		len--;
 	}
 	return (ptr);
 }
