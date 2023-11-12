@@ -17,10 +17,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	i;
 	void	*ptr;
 
-	if (nmemb && size && nmemb > 2147483647 / size)
+	if (size != 0 && nmemb > ((size_t) -1 / size))
 		return (NULL);
 	ptr = (void *)malloc(nmemb * size);
-	if (ptr != NULL)
+	if (ptr == NULL)
+		return (NULL);
+	else
 	{
 		i = 0;
 		while (i < nmemb * size)
