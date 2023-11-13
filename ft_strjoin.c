@@ -19,9 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 
 	if (s1 == NULL && s2 != NULL)
-		return ((char *)s2);
+		return (ft_strdup((char *)s2));
 	if (s2 == NULL && s1 != NULL)
-		return ((char *)s1);
+		return (ft_strdup((char *)s1));
 	if (s1 == NULL && s2 != NULL)
 		return (NULL);
 	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));

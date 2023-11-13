@@ -57,7 +57,7 @@ static char	*ndup(const char *s, size_t n)
 	return (dup);
 }
 
-void	ft_free(char **ptr, int i)
+static void	ft_free(char **ptr, int i)
 {
 	int	j;
 
@@ -67,7 +67,7 @@ void	ft_free(char **ptr, int i)
 	free(ptr);
 }
 
-char	**split(char const *s, char c, int i, char **ptr)
+static char	**split(char const *s, char c, int i, char **ptr)
 {
 	const char	*start;
 
