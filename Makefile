@@ -48,7 +48,7 @@ SRCS =	ft_atoi.c\
 		ft_memcpy.c\
 		ft_striteri.c\
 		ft_strmapi.c\
-		ft_substr.c\
+		ft_substr.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -60,11 +60,11 @@ BONUS_SRCS =	ft_lstadd_back_bonus.c\
 				ft_lstlast_bonus.c\
 				ft_lstmap_bonus.c\
 				ft_lstnew_bonus.c\
-				ft_lstsize_bonus.c\
+				ft_lstsize_bonus.c
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-all: $(BONUS_OBJS) $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
