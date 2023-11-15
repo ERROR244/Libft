@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 CC = gcc
+
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
@@ -69,7 +70,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS) 
+bonus: $(NAME) $(BONUS_OBJS) 
 	ar rcs $(NAME) $(BONUS_OBJS)
 
 clean:
