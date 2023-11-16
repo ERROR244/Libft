@@ -3,18 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:29:42 by ksohail-          #+#    #+#              #
-#    Updated: 2023/11/12 13:58:36 by ksohail-         ###   ########.fr        #
+#    Updated: 2023/11/16 11:16:24 by ksohail-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-CC = gcc
-
-CFLAGS = -Wall -Wextra -Werror
-
-NAME = libft.a
 
 SRCS =	ft_atoi.c\
 		ft_isascii.c\
@@ -51,8 +45,6 @@ SRCS =	ft_atoi.c\
 		ft_strmapi.c\
 		ft_substr.c
 
-OBJS = $(SRCS:.c=.o)
-
 BONUS_SRCS =	ft_lstadd_back_bonus.c\
 				ft_lstadd_front_bonus.c\
 				ft_lstclear_bonus.c\
@@ -63,6 +55,12 @@ BONUS_SRCS =	ft_lstadd_back_bonus.c\
 				ft_lstnew_bonus.c\
 				ft_lstsize_bonus.c
 
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror
+
+NAME = libft.a
+OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
@@ -70,8 +68,14 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(NAME) $(BONUS_OBJS) 
+bonus: $(BONUS_OBJS) 
+
+$(BONUS_OBJS):	$(BONUS_SRCS)
+	$(CC) $(CFLAGS) -c $^
 	ar rcs $(NAME) $(BONUS_OBJS)
+
+%.o:	%.c
+	$(CC) $(CFLAGS) -c $^ -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
