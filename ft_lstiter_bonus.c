@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:33:42 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/16 13:50:17 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:36:49 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst && !f)
+	if (!lst || !f)
 		return ;
 	while (lst)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksohail- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:56:29 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/05 17:03:07 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:39:20 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ static void	ft_function(int nb, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd != -1)
+	if (fd >= 0)
 		ft_function(n, fd);
 }
