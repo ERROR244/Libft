@@ -6,7 +6,7 @@
 #    By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:29:42 by ksohail-          #+#    #+#              #
-#    Updated: 2023/11/16 14:53:19 by ksohail-         ###   ########.fr        #
+#    Updated: 2023/11/17 13:02:19 by ksohail-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ BONUS_SRCS =	ft_lstadd_back_bonus.c\
 				ft_lstnew_bonus.c\
 				ft_lstsize_bonus.c
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
